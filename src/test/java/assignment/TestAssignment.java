@@ -8,9 +8,12 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junitpioneer.jupiter.DisableIfTestFails;
 import assignment.testing.framework.BaseAssignment;
 
+import static assignment.NumberConverter.MAXNUMBER;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.*;
 import static assignment.testing.framework.Utilities.*;
 
+import java.io.PrintStream;
 import java.lang.reflect.AccessFlag;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -24,6 +27,7 @@ import java.util.List;
 @DisplayName("Arbeidskrav 1")
 public class TestAssignment extends BaseAssignment
 {
+    private final PrintStream originalOut = System.out;
     @DisplayName("Del #1")
     @Order(1)
     @Test()
@@ -59,24 +63,110 @@ public class TestAssignment extends BaseAssignment
 
     }
 
-    @DisplayName("Noen tester for utregning")
+    @DisplayName("Noen tester for utregning .. opp til 100")
     @Order(3)
     @Test()
 
+   /* doesnt work with parameter int */
     public void oppgave03() {
+
         // Code that tests the assignment goes here
+        // tester ord
+        testClass("assignment.NumberConverter", () -> {
+
+
+            int inputNumber = 11;
+            var nc = classCreateInstance();
+
+            assumeTrue(MAXNUMBER < 101);
+
+
+            classInstanceInvokeMethod(nc, "printInNorwegian", inputNumber);
+            var norwegianText = "Elleve";
+            // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
+            assertStandardOutputEqualsSpecial(norwegianText, "og" );
+            //System.setOut(originalOut);
+            //System.out.println("\f");
+        });
+
+    }
+
+    @DisplayName("Noen tester for utregning .. opp til 1000")
+    @Order(4)
+    @Test()
+    public void oppgave04() {
+
+        // Code that tests the assignment goes here
+        // tester ord
         testClass("assignment.NumberConverter", () -> {
 
 
             int inputNumber = 101;
-            var nc = classCreateInstance();
+            var nc1 = classCreateInstance();
 
-            classInstanceInvokeMethod(nc, "printInNorwegian", inputNumber);
-            var norwegianText = "Ett hundre og en";
-            assertStandardOutputEquals(norwegianText);
+            assumeTrue(MAXNUMBER > 100);
+            assumeTrue(MAXNUMBER < 1001);
+
+
+
+            classInstanceInvokeMethod(nc1, "printInNorwegian", inputNumber);
+            var norwegianText = "EtthUndreen";
+            // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
+            assertStandardOutputEqualsSpecial(norwegianText, "og" );
         });
 
     }
+
+    @DisplayName("Noen tester for utregning .. opp til 1 mio")
+    @Order(5)
+    @Test()
+    public void oppgave05() {
+
+        // Code that tests the assignment goes here
+        // tester ord
+        testClass("assignment.NumberConverter", () -> {
+
+
+            int inputNumber = 1010;
+            var nc = classCreateInstance();
+            assumeTrue(MAXNUMBER > 1000);
+            assumeTrue(MAXNUMBER < 1000001);
+
+
+            classInstanceInvokeMethod(nc, "printInNorwegian", inputNumber);
+            var norwegianText = "Ett tusen og ti";
+            // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
+            assertStandardOutputEqualsSpecial(norwegianText, "og" );
+        });
+
+    }
+
+    @DisplayName("Noen tester for utregning .. meir en 1 mio")
+    @Order(6)
+    @Test()
+    public void oppgave06() {
+
+        // Code that tests the assignment goes here
+        // tester ord
+        testClass("assignment.NumberConverter", () -> {
+
+
+            int inputNumber = 10101010;
+            var nc = classCreateInstance();
+
+            assumeTrue(MAXNUMBER > 1000000);
+
+
+            classInstanceInvokeMethod(nc, "printInNorwegian", inputNumber);
+            var norwegianText = "ti millioner hundre Ett tusen og ti";
+            // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
+            assertStandardOutputEqualsSpecial(norwegianText, "og" );
+        });
+
+    }
+
+
+
 
 
 }

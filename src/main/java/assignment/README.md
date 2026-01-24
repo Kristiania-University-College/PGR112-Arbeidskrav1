@@ -14,7 +14,7 @@ Du kan bruke testene i `src/test/java/assignment/TestAssignment.java` folderen f
 
 Opprett en ny klasse _NumberConverter_ med 
 
-- felt _public final int MAXNUMBER_ -- dette setter du til maksimum tallet du velger å håndtere. 
+- felt _public static final int MAXNUMBER_ -- dette setter du til maksimum tallet du velger å håndtere. 
 - metode _printInNorwegian_ med parameter _int inputNumber_ - som tar imot ønsket tall og skriver til standard output tallet i Norsk tekst.
 
 ## Del #2:

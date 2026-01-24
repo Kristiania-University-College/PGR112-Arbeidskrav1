@@ -1,4 +1,7 @@
-# Informasjon om arbeidskrav 1 i PGR112 Vår 26 - deadline <2026-02-09 kl.23:59>
+# Informasjon om arbeidskrav 1 i PGR112 Vår 26
+
+## Del 1: kodeleveranse - deadline <2026-02-09 kl.23:59> 
+## Del 2: kodereview - deadline <2026-02-13 kl.23:59>
 
 
 ## Arbeidskrav 1: Tall til tekst

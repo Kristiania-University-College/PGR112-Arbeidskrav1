@@ -36,6 +36,22 @@ Høres kanskje enkelt ut, men det dukker nok opp noen problemstillinger undervei
 
 ---
 
+## Info om oppgaven
+
+> For å jobbe med oppgaven, skal du plassere koden din i denne `src/main/java/assignment`-mappen. 
+> Det ligger en video i Canvas modul "Arbeidskrav" som viser hvordan du jobber med oppgaven og lagrer endringer i git og GitHub.
+>  I `assignment`-mappen ligger det også en README-fil med detaljert oppgave-beskrivelse.
+> 
+> Hvis du har lyst å teste om koden din ville oppfylle kravene, finner du testoppsett
+i mappen `test/java/assignment/TestAssignment.java`. Der kan du velge å kjøre alle tester samtidig eller kjøre dem en og en.
+>
+> Kode testing skal vi se på i en av de neste forelesninger.
+>
+>
+> Lykke til!
+
+---
+
 ### Info om Github og IntelliJ
 
 > To work on the assignments, you should clone this repository...

@@ -5,10 +5,25 @@ I filmen [Objektorientering i Sopra Steria](https://kristiania.instructure.com/c
 Høres kanskje enkelt ut, men det dukker nok opp noen problemstillinger underveis... Du kan selv velge hvor mange tall løsningen din kan håndtere.
 
 
-Koden din skal ligge i form av java-filer i `src/main/java/assignment` folderen. Du kan bruke testene i `src/test/java/assignment/TestAssignment.java` folderen for å teste løsningen din underveis.
+Koden din skal ligge i form av java-filer i `src/main/java/assignment` folderen. 
+Du kan bruke testene i `src/test/java/assignment/TestAssignment.java` folderen for å teste løsningen din underveis.
 
-Det er tre oppgaver:
+---
 
-- _enkelt_ (60 poeng): opp til 100
-- _middels_ (20 poeng): til 1 million
-- _vanskelig_ (20 poeng): nynorsk (just kidding) TBA
+## Del #1:
+
+Opprett en ny klasse _NumberConverter_ med 
+
+- felt _MAXNUMBER_ -- dette blir maksimum tallet du velger å håndtere. 
+- en konstruktør med parameter _int maximumNumber_ -- som setter maksimum tallet ved objekt initialisering.
+- metode _printInNorwegian_ med parameter _int inputNumber_ - som tar imot ønsket tall og skriver til standard output tallet i Norsk tekst.
+
+## Del #2:
+
+Opprett en ny compact source fil _JavaProgram_ som
+
+- oppretter et nytt objekt fra klasse _NumberConverter_
+- leser fra standard input
+- kaller objektmetoden _printInNorwegian_ med tallet 
+
+

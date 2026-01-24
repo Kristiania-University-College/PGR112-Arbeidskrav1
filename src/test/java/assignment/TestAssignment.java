@@ -21,38 +21,60 @@ import java.util.List;
 
 @DisableIfTestFails
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@DisplayName("Assignment Title")
+@DisplayName("Arbeidskrav 1")
 public class TestAssignment extends BaseAssignment
 {
-    @DisplayName("Assignment Oppgave #1")
+    @DisplayName("Del #1")
     @Order(1)
     @Test()
     public void oppgave01() {
         // Code that tests the assignment goes here
+        testClass("assignment.NumberConverter", () -> {
+            provideHintIfAssertionFails(
+                    "Finner ikke felt MAXNUMBER. Har du skrevet og deklarert den riktig?"
+                    ,
+                    () -> {
+                        assertTrue(fieldExists("MAXNUMBER"));
+                    }
+            );
 
-        // enkelt fra 1 opp til 100 ?
+            provideHintIfAssertionFails(
+                    "Feil i metode deklarering. Har du skrevet riktig navn og riktig parameter type?"
+                    ,
+                    () -> {
+                        assertTrue(methodExists("printInNorwegian", int.class));
+                    }
+            );
+        });
 
     }
 
-    @DisplayName("Assignment Oppgave #2")
+    @DisplayName("Del #2")
     @Order(2)
     @Test()
 
     public void oppgave02() {
         // Code that tests the assignment goes here
-
-        //middels til 1 million? ?
+        //Hvordan tester sin og sout ?
 
     }
 
-    @DisplayName("Assignment Oppgave #3")
+    @DisplayName("Noen tester for utregning")
     @Order(3)
     @Test()
 
     public void oppgave03() {
         // Code that tests the assignment goes here
+        testClass("assignment.NumberConverter", () -> {
 
-        //vanskelig: corner cases perfekt?
+
+            int inputNumber = 101;
+            var nc = classCreateInstance();
+
+            classInstanceInvokeMethod(nc, "printInNorwegian", inputNumber);
+            var norwegianText = "Ett hundre og en";
+            assertStandardOutputEquals(norwegianText);
+        });
 
     }
 

@@ -83,7 +83,7 @@ public class TestAssignment extends BaseAssignment
     }
 
     @DisplayName("Noen tester for utregning .. opp til 1000")
-    @Order(3)
+    @Order(2)
     @Test()
     public void oppgave03() {
 
@@ -109,7 +109,7 @@ public class TestAssignment extends BaseAssignment
     }
 
     @DisplayName("Noen tester for utregning .. opp til 1 mio")
-    @Order(4)
+    @Order(2)
     @Test()
     public void oppgave04() {
 
@@ -133,7 +133,7 @@ public class TestAssignment extends BaseAssignment
     }
 
     @DisplayName("Noen tester for utregning .. meir en 1 mio")
-    @Order(5)
+    @Order(2)
     @Test()
     public void oppgave05() {
 

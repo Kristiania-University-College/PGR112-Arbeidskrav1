@@ -170,12 +170,12 @@ public class Utilities
 
     /** Scoped CLASS */
     static public void classInstanceInvokeMethod(Object instance, String methodName, Object... parameterValues) {
-        var signature = Arrays.stream(parameterValues).map(Object::getClass).toArray();
+        var signature = Arrays.stream(parameterValues).map(Object::getClass).toArray(Class<?>[]::new);
 
         try {
             var method = parameterValues.length == 0
                 ? CLASS.get().getMethod(methodName)
-                : CLASS.get().getMethod(methodName, (Class<?>[]) signature)
+                : CLASS.get().getMethod(methodName, signature)
             ;
 
             method.invoke(instance, parameterValues);
@@ -829,6 +829,10 @@ public class Utilities
     //## Assertions
     static public void assertStandardOutputEquals(String input) {
         assertEquals("\"%s\"".formatted(input), "\"%s\"".formatted(Utilities.getStandardOutput()));
+    }
+
+    static public void assertStandardOutputEqualsSpecial(String input, String omit) {
+        assertEquals("\"%s\"".formatted(input).toLowerCase().replaceAll("\\s+","").replaceAll(omit,""), "\"%s\"".formatted(Utilities.getStandardOutput().toLowerCase().replaceAll("\\s+","").replaceAll(omit,"")));
     }
 
     static public void assertStandardOutputEquals(String input, int n) {

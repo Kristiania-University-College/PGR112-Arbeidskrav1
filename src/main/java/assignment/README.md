@@ -15,7 +15,7 @@ Du kan bruke testene i `src/test/java/assignment/TestAssignment.java` folderen f
 Opprett en ny klasse _NumberConverter_ med 
 
 - felt _public static final int MAXNUMBER_ -- dette setter du til maksimum tallet du velger å håndtere. 
-- metode _printInNorwegian_ med parameter _int inputNumber_ - som tar imot ønsket tall og skriver til standard output tallet i Norsk tekst.
+- metode _printInNorwegian_ med parameter _INTEGER inputNumber_ - som tar imot ønsket tall og skriver til standard output tallet i Norsk tekst. Merk at parameteren skal ha ikke-primitive datatype INTEGER.
 
 ## Del #2:
 
@@ -25,4 +25,14 @@ Opprett en ny compact source fil _JavaProgram_ som
 - leser fra standard input
 - kaller objektmetoden _printInNorwegian_ med tallet 
 
+---
+
+## Tips og teknisk informasjon
+
+> For at GitHub classroom klarer å teste koden din automatisk er det viktig at du skriver koden nøyaktig slik som det står i oppgave beskrivelsen - samt stor og småbokstaver
+
+> Hver gang du pusher opp koden din, blir det kjør to tester:
+
+1) en test som sjekker om du har brukt riktikt syntakseni DEL #1.
+2) en test som sjekker om _printInNorwegian_ skriver ut riktig tekst til standard-output avhengig av _MAXNUMBER_ du setter. F.e. setter du _MAXNUMBER = 100_ ville testene kun kjøre for tall opp til 100. 
 

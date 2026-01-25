@@ -27,7 +27,7 @@ jobs:
           setup-command: ''
           command: mvn -Dtest=TestAssignment#oppgave01 test
           timeout: 10
-          max-score: 60
+          max-score: 30
       - name: oppgave02
         id: oppgave02
         uses: classroom-resources/autograding-command-grader@v1
@@ -36,7 +36,7 @@ jobs:
           setup-command: ''
           command: mvn -Dtest=TestAssignment#oppgave02 test
           timeout: 10
-          max-score: 20
+          max-score: 30
       - name: oppgave03
         id: oppgave03
         uses: classroom-resources/autograding-command-grader@v1
@@ -45,13 +45,32 @@ jobs:
           setup-command: ''
           command: mvn -Dtest=TestAssignment#oppgave03 test
           timeout: 10
-          max-score: 20
-
+          max-score: 40
+      - name: oppgave04
+        id: oppgave04
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: oppgave04
+          setup-command: ''
+          command: mvn -Dtest=TestAssignment#oppgave04 test
+          timeout: 10
+          max-score: 60
+      - name: oppgave05
+        id: oppgave05
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: oppgave05
+          setup-command: ''
+          command: mvn -Dtest=TestAssignment#oppgave05 test
+          timeout: 10
+          max-score: 70
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
           OPPGAVE01_RESULTS: "${{steps.oppgave01.outputs.result}}"
           OPPGAVE02_RESULTS: "${{steps.oppgave02.outputs.result}}"
           OPPGAVE03_RESULTS: "${{steps.oppgave03.outputs.result}}"
+          OPPGAVE04_RESULTS: "${{steps.oppgave04.outputs.result}}"
+          OPPGAVE05_RESULTS: "${{steps.oppgave05.outputs.result}}"
         with:
-          runners: oppgave01,oppgave02,oppgave03
+          runners: oppgave01,oppgave02,oppgave03,oppgave04,oppgave05

@@ -832,7 +832,7 @@ public class Utilities
     }
 
     static public void assertStandardOutputEqualsSpecial(String input, String omit) {
-        assertEquals("\"%s\"".formatted(input).toLowerCase().replaceAll("\\s+","").replaceAll("og",""), "\"%s\"".formatted(Utilities.getStandardOutput().toLowerCase().replaceAll("\\s+","").replaceAll("og","")));
+        assertEquals("\"%s\"".formatted(input).toLowerCase().replaceAll("\\s+","").replaceAll(omit,""), "\"%s\"".formatted(Utilities.getStandardOutput().toLowerCase().replaceAll("\\s+","").replaceAll(omit,"")));
     }
 
     static public void assertStandardOutputEquals(String input, int n) {

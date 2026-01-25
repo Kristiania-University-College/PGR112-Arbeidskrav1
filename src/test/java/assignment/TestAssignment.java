@@ -28,7 +28,7 @@ import java.util.List;
 public class TestAssignment extends BaseAssignment
 {
     private final PrintStream originalOut = System.out;
-    @DisplayName("Del #1")
+    @DisplayName("Del #1 - test oppretting av klasse, variabel og methode")
     @Order(1)
     @Test()
     public void oppgave01() {
@@ -53,22 +53,14 @@ public class TestAssignment extends BaseAssignment
 
     }
 
-    @DisplayName("Del #2")
+
+
+    @DisplayName("Noen tester for utregning .. opp til 100")
     @Order(2)
     @Test()
 
-    public void oppgave02() {
-        // Code that tests the assignment goes here
-        //Hvordan tester sin og sout ?
-
-    }
-
-    @DisplayName("Noen tester for utregning .. opp til 100")
-    @Order(3)
-    @Test()
-
    /* doesnt work with parameter int */
-    public void oppgave03() {
+    public void oppgave02() {
 
         // Code that tests the assignment goes here
         // tester ord
@@ -85,16 +77,15 @@ public class TestAssignment extends BaseAssignment
             var norwegianText = "Elleve";
             // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
             assertStandardOutputEqualsSpecial(norwegianText, "og" );
-            //System.setOut(originalOut);
-            //System.out.println("\f");
+
         });
 
     }
 
     @DisplayName("Noen tester for utregning .. opp til 1000")
-    @Order(4)
+    @Order(3)
     @Test()
-    public void oppgave04() {
+    public void oppgave03() {
 
         // Code that tests the assignment goes here
         // tester ord
@@ -110,7 +101,7 @@ public class TestAssignment extends BaseAssignment
 
 
             classInstanceInvokeMethod(nc1, "printInNorwegian", inputNumber);
-            var norwegianText = "EtthUndreen";
+            var norwegianText = "Ett hundre og en";
             // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
             assertStandardOutputEqualsSpecial(norwegianText, "og" );
         });
@@ -118,9 +109,9 @@ public class TestAssignment extends BaseAssignment
     }
 
     @DisplayName("Noen tester for utregning .. opp til 1 mio")
-    @Order(5)
+    @Order(4)
     @Test()
-    public void oppgave05() {
+    public void oppgave04() {
 
         // Code that tests the assignment goes here
         // tester ord
@@ -142,9 +133,9 @@ public class TestAssignment extends BaseAssignment
     }
 
     @DisplayName("Noen tester for utregning .. meir en 1 mio")
-    @Order(6)
+    @Order(5)
     @Test()
-    public void oppgave06() {
+    public void oppgave05() {
 
         // Code that tests the assignment goes here
         // tester ord

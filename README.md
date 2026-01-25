@@ -1,4 +1,7 @@
-# Informasjon om arbeidskrav 1 i PGR112 Vår 26 - deadline <2026-02-09 kl.23:59>
+# Informasjon om arbeidskrav 1 i PGR112 Vår 26
+
+## Del 1: kodeleveranse - innleveringsfrist <2026-02-09 kl.23:59> 
+## Del 2: kodereview - tidsfrist <2026-02-13 kl.23:59>
 
 
 ## Arbeidskrav 1: Tall til tekst
@@ -33,6 +36,22 @@ For videoen (hvis video er inkludert i besvarelsen) er det godt å vite at det b
 I filmen [Objektorientering i Sopra Steria](https://kristiania.instructure.com/courses/14902/pages/film-objektorientering-i-sopra-steria?module_item_id=627164) (tid: 9.14–10.51) nevner Johannes en oppgave som de av og til benytter i ansettelsesprosessen. Oppgaven er: Lag et Java-program der brukeren kan skrive inn et tall, og få en tekstlig beskrivelse fra programmet av hvordan tallet uttales på norsk. Hvis for eksempel brukeren skriver inn «101», skal programmet skrive ut «Ett hundre og en».
 
 Høres kanskje enkelt ut, men det dukker nok opp noen problemstillinger underveis... Du kan selv velge hvor mange tall løsningen din kan håndtere.
+
+---
+
+## Info om oppgaven
+
+> For å jobbe med oppgaven, skal du plassere koden din i denne `src/main/java/assignment`-mappen. 
+> Det ligger en video i Canvas modul "Arbeidskrav" som viser hvordan du jobber med oppgaven og lagrer endringer i git og GitHub.
+>  I `assignment`-mappen ligger det også en README-fil med detaljert oppgave-beskrivelse.
+> 
+> Hvis du har lyst å teste om koden din ville oppfylle kravene, finner du testoppsett
+i mappen `test/java/assignment/TestAssignment.java`. Der kan du velge å kjøre alle tester samtidig eller kjøre dem en og en.
+>
+> Kode testing skal vi se på i en av de neste forelesninger.
+>
+>
+> Lykke til!
 
 ---
 
